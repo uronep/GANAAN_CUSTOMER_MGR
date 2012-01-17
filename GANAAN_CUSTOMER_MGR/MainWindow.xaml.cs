@@ -23,6 +23,12 @@ namespace GANAAN_CUSTOMER_MGR
         {
             InitializeComponent();
             this.Loaded += new RoutedEventHandler(MainWindow_Loaded);
+            this.Closed += new EventHandler(MainWindow_Closed);
+        }
+
+        void MainWindow_Closed(object sender, EventArgs e)
+        {
+            //TODO: 종료시 DB 파일을 백업한다. 년별로 폴더를 생성하여 뒤에 날짜를 붙여 복사본을 만든다.
         }
 
         void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -41,5 +47,7 @@ namespace GANAAN_CUSTOMER_MGR
             // 또는 DB 파일 찾기
             // 파일명은 GANAAN.db
         }
+
+        
     }
 }

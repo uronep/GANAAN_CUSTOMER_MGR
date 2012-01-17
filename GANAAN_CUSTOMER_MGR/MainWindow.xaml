@@ -7,29 +7,37 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="3"/>
+            <Setter Property="FontSize" Value="20"/>
         </Style>
         <Style x:Key="stComboBox" TargetType="ComboBox">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="3"/>
             <Setter Property="Width" Value="100"/>
+            <Setter Property="FontSize" Value="20"/>
         </Style>
         <Style x:Key="stTextBox" TargetType="TextBox">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="3"/>
-            <Setter Property="Width" Value="100"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="FontSize" Value="20"/>
         </Style>
         <Style x:Key="stButton" TargetType="Button">
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="3"/>
             <Setter Property="Width" Value="100"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style x:Key="stTabItem" TargetType="TabItem">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="FontSize" Value="20"/>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid>   
         <TabControl>
-            <TabItem Header="검색" Width="200">
+            <TabItem Header="검색" Style="{StaticResource stTabItem}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
