@@ -40,7 +40,6 @@ namespace GANAAN_CUSTOMER_MGR
             // 없으면 DB 생성
             // 또는 DB 파일 찾기
             // 파일명은 GANAAN.db
-
         }
     }
 }
