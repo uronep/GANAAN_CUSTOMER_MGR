@@ -19,6 +19,8 @@ namespace GANAAN_CUSTOMER_MGR
     /// </summary>
     public partial class MainWindow : Window
     {
+        const string strDbFileName = "GANAAN_CUSTOMER.db";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -37,17 +39,21 @@ namespace GANAAN_CUSTOMER_MGR
             cboSearchCondition.Items.Add("전체");
             cboSearchCondition.SelectedIndex = 0;
 
-            // 검색실행            
+            // 검색실행    
+        
+
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
+            // 파일 확인
+            bool bExit = Control_File.CheckFile(strDbFileName);
+
             // SQLite 호출
             // 없으면 DB 생성
             // 또는 DB 파일 찾기
             // 파일명은 GANAAN.db
         }
-
-        
+      
     }
 }

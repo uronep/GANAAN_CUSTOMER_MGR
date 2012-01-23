@@ -31,7 +31,7 @@
             <Setter Property="FontSize" Value="20"/>
         </Style>
         <Style x:Key="stTabItem" TargetType="TabItem">
-            <Setter Property="Width" Value="200"/>
+            <Setter Property="Width" Value="100"/>
             <Setter Property="FontSize" Value="20"/>
         </Style>
     </Window.Resources>
@@ -43,12 +43,21 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Grid.Row="0" Orientation="Horizontal">
                         <TextBlock Text="검색조건" Style="{StaticResource stTextBlock}" />
                         <ComboBox x:Name="cboSearchCondition" Style="{StaticResource stComboBox}" />
                         <TextBox Style="{StaticResource stTextBox}"/>
                         <Button x:Name="btnSearch" Content="검색" Click="btnSearch_Click"  Style="{StaticResource stButton}"/>
                     </StackPanel>
+                    <DataGrid Grid.Row="1" x:Name="gridResult" Margin="0,10,0,0" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Path=aa}" Header="이름" />
+                            <DataGridTextColumn Binding="{Binding Path=aa}" Header="전화번호" />
+                            <DataGridTextColumn Binding="{Binding Path=aa}" Header="주소" />
+                            <DataGridTextColumn Binding="{Binding Path=aa}" Header="등록일" />
+                            <DataGridTextColumn Binding="{Binding Path=aa}" Header="설명" />
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
             </TabItem>
         </TabControl>
